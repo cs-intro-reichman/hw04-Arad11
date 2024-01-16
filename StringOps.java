@@ -36,7 +36,7 @@ public class StringOps {
         for (int i = 0; i < string.length(); i++) {
             currentCharValue = Integer.valueOf(string.charAt(i));
             if ( currentCharValue == 32) {
-                continue;
+                newStr += string.charAt(i);
             }
             if(currentCharValue == 97 || currentCharValue == 101 || currentCharValue == 111 || currentCharValue == 117 || currentCharValue == 105) {
                 newStr += (char)(currentCharValue - 32);
