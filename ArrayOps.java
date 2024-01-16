@@ -54,18 +54,18 @@ public class ArrayOps {
         for(int i = 0; i < array1.length; i++) {
             for( int j = 0; j < array2.length; j++) {
                 isFirstcontains = isContains(array2[j], array1);
-            }
-            if (!isFirstcontains) {
-                return false;
+                if (!isFirstcontains) {
+                    return false;
+                }
             }
         }
 
         for(int i = 0; i < array2.length; i++) {
             for( int j = 0; j < array1.length; j++) {
                 isSecondContains = isContains(array1[j], array2);
-            }
-            if (!isSecondContains) {
-                return false;
+                if (!isSecondContains) {
+                    return false;
+                }
             }
         }
 
