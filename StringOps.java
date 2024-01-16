@@ -22,19 +22,12 @@ public class StringOps {
     //////                                               ///////
     ////////////////////////////////////////////////////////////
     public static void main(String[] args) {
-        // System.out.println("z " + Integer.valueOf('z'));
-        // System.out.println("a " + Integer.valueOf('a'));
-        // System.out.println("e " + Integer.valueOf('e'));
-        // System.out.println("i " + Integer.valueOf('i'));
-        // System.out.println("o " + Integer.valueOf('o'));
-        // System.out.println("u " + Integer.valueOf('u'));
-        // System.out.println("A " + Integer.valueOf('A'));
-        // System.out.println("Z " + Integer.valueOf('Z'));
-        System.out.println(camelCase("Hello World"));
-        System.out.println(camelCase("HELLO world"));
-        System.out.println(camelCase(" tWo wordS"));
-        System.out.println(camelCase("world"));
-        System.out.println(camelCase("“ Intro to coMPUter sCIEncE "));
+        // System.out.println(allIndexOf("Hello world",'l'));
+        // System.out.println(allIndexOf("Hello worLd",'l'));
+        // System.out.println(allIndexOf("Hello world",'o'));
+        // System.out.println(allIndexOf("Hello world",' '));
+        // System.out.println(allIndexOf("Hello world",'d'));
+        // System.out.println(allIndexOf("MMMM",'M'));
     }
     
     public static String capVowelsLowRest (String string) {
@@ -104,12 +97,26 @@ public class StringOps {
                 }
             }
         }
-        
+
         return newStr;
     }
 
     public static int[] allIndexOf (String string, char chr) {
-        // Write your code here:
-        return new int[1];
+        int chrCounter = 0;
+        for (int i = 0; i < string.length(); i++) {
+            if (string.charAt(i) == chr) {
+                 chrCounter++;
+            }
+        }
+        int indexCounter = 0;
+        int[] charIndecies = new int[chrCounter];
+        for (int i = 0; i < string.length(); i++) {
+            if (string.charAt(i) == chr) {
+                charIndecies[indexCounter] = i;
+                indexCounter++;
+            }
+        }
+
+        return charIndecies;
     }
 }
