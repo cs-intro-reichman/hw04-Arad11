@@ -1,7 +1,8 @@
 public class ArrayOps {
     public static void main(String[] args) {
-        int[] arr = {0,1,2,3,4,6};
-        int a = findMissingInt(arr);
+        int[] arr = {2,2,3,7,8,3,2};
+        int[] arr2 = {8,2,7,7,3};
+        boolean a = containsTheSameElements( arr,arr2);
         int b = 4;
     }
     
@@ -52,13 +53,13 @@ public class ArrayOps {
         boolean isSecondContains = false;
         for(int i = 0; i < array1.length; i++) {
             for( int j = 0; j < array2.length; j++) {
-                isFirstcontains = isContains(array2[i], array1);
+                isFirstcontains = isContains(array2[j], array1);
             }
         }
 
         for(int i = 0; i < array2.length; i++) {
             for( int j = 0; j < array1.length; j++) {
-                isSecondContains = isContains(array1[i], array2);
+                isSecondContains = isContains(array1[j], array2);
             }
         }
 
