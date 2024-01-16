@@ -15,7 +15,7 @@ public class ArrayOps {
     }
 
     private static int calcInvoiceSeriesSum(int [] array) {
-        int first = array[0];
+        int first = 0;
         int n = array.length + 1;
         int d = 1;
         double sum = (n / 2.0) * (2*first + (n-1)*d);
