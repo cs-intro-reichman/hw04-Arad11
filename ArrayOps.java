@@ -1,6 +1,8 @@
 public class ArrayOps {
     public static void main(String[] args) {
-        
+        int[] arr = {0,1,2,3,4,6};
+        int a = findMissingInt(arr);
+        int b = 4;
     }
     
     public static int findMissingInt (int [] array) {
@@ -13,10 +15,10 @@ public class ArrayOps {
     }
 
     private static int calcInvoiceSeriesSum(int [] array) {
-        int first = array[0];
-        int n = array.length;
+        int first = 0;
+        int n = array.length + 1;
         int d = 1;
-        double sum = (n / 2) * (2*first + (n-1)*d);
+        double sum = (n / 2.0) * (2*first + (n-1)*d);
         return (int)sum;
     }
 
